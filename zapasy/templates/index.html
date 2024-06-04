@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12 text-center bg-info mt-3 mb-3 box-rounded">
+            <h2 class="text-white p-3">Mladí hráči, kteří ovládají mužský fotbal</h2>
+        </div>
+    {% for hrac in hraci %}
+    <div class="col-lg-3 col-md-6 text-center">
+        <p><img src="{{ hrac.fotka.url }}" alt="{{ hrac.prijmeni }}" class="img-fluid rounded-circle"></p>
+        <h3><a href="#" class="btn btn-info">{{ hrac.jmeno }} {{ hrac.prijmeni|upper }}</a></h3>
+        <p>Ročník: <b>{{ hrac.narozeni.year }}</b></p>
+        <p class="small">Oddíl: <b>{{ hrac.klub }}</b></p>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}
