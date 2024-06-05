@@ -58,4 +58,4 @@ class Zapas(models.Model):
         verbose_name_plural = 'Zápasy'
 
     def __str__(self):
-        return f'{self.datum_konani.day}. {self.datum_konani.month}. {self.datum_konani.year}:)'
+        return f'{self.datum.day}. {self.datum.month}. {self.datum.year}:)'
