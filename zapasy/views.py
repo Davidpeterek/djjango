@@ -25,3 +25,9 @@ class KlubDetailView(DetailView):
     model = Klub
     template_name ='kluby/detail.html'
     context_object_name ='klub'
+
+class ZapasListView(DetailView):
+    model = Zapas
+    template_name = 'zapas/zapas_list.html'
+    context_object_name = 'zapas'
+    ordering = ['-datum']

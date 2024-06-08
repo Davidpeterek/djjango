@@ -14,17 +14,16 @@ Přehled klubů
                     <th>Název klubu</th>
                     <th>Místo</th>
                     <th class="text-right">Rok založení</th>
-                    <th class="text-center">Počet členů</th>
                 </tr>
             </thead>
             <tbody>
-                {% for klub in kluby %}
+                {% for klub in zapasy %}
                 <tr>
                     <td>{% if klub.logo %}<img src="{{ klub.logo.url }}" alt="Logo {{ klub.nazev }}" class="logo-klubu rounded-pill">{% endif %}</td>
-                    <td><b><a href="{% url 'detail_klubu' klub.id %}">{{ klub.nazev.upper }}</a></b></td>
+                    <td><b><a href="{% url 'detail.html' klub.id %}">{{ klub.nazev.upper }}</a></b></td>
                     <td>{{ klub.misto }}</td>
                     <td class="text-right">{{ klub.zalozeni }}</td>
-                    <td class="text-center"><span class="badge-pill badge-danger">{{ klub.cyklista_set.count }}</span></td>
+                    <td class="text-center"><span class="badge-pill badge-danger">{{ klub.hrac_set.count }}</span></td>
                 </tr>
                 </a>
                 {% endfor %}

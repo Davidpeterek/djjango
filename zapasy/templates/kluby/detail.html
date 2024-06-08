@@ -17,16 +17,14 @@
         <div class="col-lg-8">
             <h3>Závodníci</h3>
             <div>
-                {% for cyklista in klub.cyklista_set.all %}
+                {% for hrac in klub.hrac_set.all %}
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ cyklista.fotka.url }}" alt="{{ cyklista }}" class="img-fluid img-thumbnail">
+                        <img src="{{ hrac.fotka.url }}" alt="{{ hrac }}" class="img-fluid img-thumbnail">
                     </div>
                     <div class="col-md-8">
-                        <h4>{{ cyklista.jmeno }} {{ cyklista.prijmeni.upper }}</h4>
-                        <p>Narozen: {{ cyklista.narozeni }}</p>
-                        <h5>Výsledky</h5>
-                        <p class="bg-light p-3">{{ cyklista.kariera }}</p>
+                        <h4>{{ hrac.jmeno }} {{ hrac.prijmeni.upper }}</h4>
+                        <p>Narozen: {{ hrac.narozeni }}</p>
                     </div>
                 </div>
                 {% endfor %}
