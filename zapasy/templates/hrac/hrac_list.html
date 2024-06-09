@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Přehled hráčů
+{% endblock %}
+
+ <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        h2 { text-align: center; }
+        .item { border-bottom: 1px solid #ccc; padding: 10px 0; }
+        .item:last-child { border-bottom: none; }
+    </style>
+
+{% block content %}
+    <h2 class="text-danger text-center text-uppercase m-3">Přehled hráčů</h2>
+    <div>
+        <table class="table table-active table-hover table-responsive-lg">
+            <thead class="bg-danger text-light">
+                <tr>
+                    <th>Foto</th>
+                    <th>Jméno hráče</th>
+                    <th>Narození</th>
+                    <th class="text-right">Klub</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hrac in zapasy %}
+                <tr>
+                    <td>{% if hrac.fotka %}<img src="{{ hrac.fotka.url }}" alt="fotka">{% endif %}</td>
+                    <td><b><a href="{% url 'hrac_detail.html' hrac.id %}">{{ hrac.jmeno.upper }}</a></b></td>
+                    <td>{{ hrac.narozeni }}</td>
+                    <td class="text-right">{{ hrac.klub }}</td>
+                </tr>
+                </a>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

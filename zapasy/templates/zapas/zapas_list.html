@@ -21,14 +21,13 @@
             <tr>
                 <td><strong><a href="#" class="text-info">{{ zapas.datum.upper }}</a></strong></td>
                 <td>
-                    {% for klub in book.autori.all %}
-                    <a href="#">{{ autor.jmeno|first }}. {{ autor.prijmeni }}</a>
+                    {% for klub in zapas.datum.all %}
                     {% if not forloop.last %}, {% endif %}
                     {% endfor %}
                 </td>
-                <td>{{ book.vydavatelstvi }}</td>
-                <td class="text-right">{{ book.rok_vydani }}</td>
-                <td class="text-right">{{ book.pocet_stran }}</td>
+                <td>{{ zapas.datum }}</td>
+                <td class="text-right">{{ zapas.domaci_skore }}</td>
+                <td class="text-right">{{ zapas.hostujici_skore }}</td>
             </tr>
             {% endfor %}
             </tbody>
