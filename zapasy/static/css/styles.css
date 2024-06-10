@@ -1,5 +1,5 @@
 header {
-    background-image: url('../img/OIP.jpeg');
+    background-image: url('../img/ucl.jpeg');
     background-repeat: no-repeat;
     background-position: right 5% center;
 }
@@ -9,9 +9,12 @@ header {
 }
 
 .logo-klubu {
-    max-width: 60px;
+    max-width: 25px;
 }
 
 table td {
     vertical-align: middle !important;
 }
+
+
+

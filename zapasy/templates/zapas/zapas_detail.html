@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ hrac.jmeno }}</title>
-      <style>
+    <title>Zápas: {{ zapas.nazev }}</title>
+     <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f2f5;
@@ -31,10 +31,15 @@
     </style>
 </head>
 <body>
-    <h1>{{ hrac.jmeno }} {{ hrac.prijmeni }}</h1>
-    <p>Klub: {{ hrac.klub }}</p>
-    <p>Narození: {{ hrac.narozeni }}</p>
-    <p>Fotka: {{ hrac.fotka }}</p>
-    <a href="{% url 'hrac_list.html' %}">Zpět na seznam hráčů</a>
+    <div class="container">
+        <h1>Zápas: {{ zapas.nazev }}</h1>
+        <p>Datum: {{ zapas.datum }}</p>
+        <p>Domácí tým: {{ zapas.domaci_tym }}</p>
+        <p>Skóre domácího týmu: {{ zapas.domaci_skore }}</p>
+        <p>Hostující tým: {{ zapas.hostujici_tym }}</p>
+        <p>Skóre domácího týmu: {{ zapas.hostujici_skore }}</p>
+        
+        <a href="{% url 'zapas_list.html' %}">Zpět na seznam zápasů</a>
+    </div>
 </body>
-</html
+</html>
