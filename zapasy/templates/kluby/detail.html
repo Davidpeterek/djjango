@@ -3,39 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ klub.nazev }}</title>
-     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #444;
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <h1>{{ klub.nazev }}</h1>
         <p>Rok založení: {{ klub.zalozeni }}</p>
         <p>Místo: {{ klub.misto }}</p>
-        <p>Logo: { { klub.logo } }</p>
+        <p>Logo: <img src="{{ klub.logo.url }}"> </p>
         <a href="{% url 'list.html' %}">Zpět na seznam klubů</a>
     </div>
 </body>

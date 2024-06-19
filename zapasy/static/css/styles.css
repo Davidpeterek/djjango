@@ -1,20 +1,43 @@
-header {
-    background-image: url('../img/ucl.jpeg');
-    background-repeat: no-repeat;
-    background-position: right 5% center;
-}
+ body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #444;
+        }
 
-.box-rounded {
-    border-radius: 20px !important;
-}
+        h2 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+        }
 
-.logo-klubu {
-    max-width: 25px;
-}
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
 
-table td {
-    vertical-align: middle !important;
-}
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            height: 10px;
+        }
 
 
 

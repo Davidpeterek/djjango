@@ -3,38 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ hrac.jmeno }}</title>
-      <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #444;
-        }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
 </head>
 <body>
     <h1>{{ hrac.jmeno }} {{ hrac.prijmeni }}</h1>
     <p>Klub: {{ hrac.klub }}</p>
     <p>Narození: {{ hrac.narozeni }}</p>
-    <p>Fotka: {{ hrac.fotka }}</p>
+    <p>Fotka:  <img src="{{ hrac.fotka.url }}"> </p>
     <a href="{% url 'hrac_list.html' %}">Zpět na seznam hráčů</a>
 </body>
 </html
